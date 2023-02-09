@@ -98,7 +98,7 @@ kubectl get pods
 
 kubectl logs -f spring-mongo-service-844c79fd84-bknxs
 
-kubectl exec -it mongo-849c7745db-jj9ps --mongo -u test -p test@123 --authenticationDatabase admin
+kubectl exec -it mongo-849c7745db-jj9ps mongo -u test -p --authenticationDatabase admin
 
 show dbs;
 
