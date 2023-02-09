@@ -39,7 +39,7 @@ Digest: sha256:134e3f2db743d46bdb7f3eb6bcfa4b8e3dde578c9ff8a10742ce29d706acf9b2
 Status: Downloaded newer image for mongo:latest
 docker.io/library/mongo:latest
 
-docker build -t springboot-mongo-service:1.0 .
+docker build -t spring-mongo-service:1.0 .
 [+] Building 7.9s (7/7) FINISHED                                                
  => [internal] load build definition from Dockerfile                       0.0s
  => => transferring dockerfile: 254B                                       0.0s
