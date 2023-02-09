@@ -94,7 +94,11 @@ kubectl apply -f deployment.yml
 service/spring-mongo-service created
 deployment.apps/spring-mongo-service created
 
-kubectl get pods
+kubectl get pods                          
+NAME                                    READY   STATUS              RESTARTS   AGE
+mongo-849c7745db-47qm8                  1/1     Running             0          5m33s
+spring-mongo-service-6c9f688b8f-dqsfl   0/1     ContainerCreating   0          3s
+spring-mongo-service-6c9f688b8f-kmfsf   0/1     ContainerCreating   0          3s
 
 kubectl logs -f spring-mongo-service-844c79fd84-bknxs
 
