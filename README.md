@@ -39,6 +39,25 @@ Digest: sha256:134e3f2db743d46bdb7f3eb6bcfa4b8e3dde578c9ff8a10742ce29d706acf9b2
 Status: Downloaded newer image for mongo:latest
 docker.io/library/mongo:latest
 
+docker run -d -p 27017:27017 mongo:latest
+1cb836820b9e08243d84751066c6015313d7bbe1babbd966913fe6c16c72ac81
+
+docker ps 
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS              PORTS                      NAMES
+1cb836820b9e   mongo:latest   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27017->27017/tcp   admiring_tu
+
+docker exec -it 1cb8 mongo
+
+docker rm $(docker ps -a -q) -f
+docker rmi $(docker images -a -q) -f
+
+docker-compose build
+docker-compose up
+
+mongodb://test:test@123@localhost:27017/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false
+
+https://manglekuo.medium.com/running-mongodb-on-docker-with-macos-b08324f5aab2
+
 docker build -t spring-mongo-service:1.0 .
 [+] Building 7.9s (7/7) FINISHED                                                
  => [internal] load build definition from Dockerfile                       0.0s
@@ -130,3 +149,4 @@ db.product.find().pretty();
 
 <img width="1107" alt="Screenshot 2023-02-09 at 1 38 37 AM" src="https://user-images.githubusercontent.com/43849911/217639951-3151ef96-8833-4078-95a8-03bd1c41e08c.png">
 
+<img width="1425" alt="Screenshot 2023-02-15 at 1 11 05 AM" src="https://user-images.githubusercontent.com/43849911/218840565-4c5431a4-6a08-44d0-a02e-4268807facf4.png">
