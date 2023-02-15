@@ -1,16 +1,3 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name: spring-mongo-service
-spec:
-  selector:
-    app: spring-mongo-service
-  ports:
-    - protocol: TCP
-      port: 8080
-      nodePort: 30081
-  type: NodePort
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -52,3 +39,18 @@ spec:
                 configMapKeyRef:
                   name: mongo-conf
                   key: host
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-mongo-service
+spec:
+  selector:
+    app: spring-mongo-service
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: 30081
+  type: NodePort
+
+                  

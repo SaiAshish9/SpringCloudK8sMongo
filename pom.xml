@@ -8,14 +8,16 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sai</groupId>
-	<artifactId>SpringCloudK8sMongo</artifactId>
+	<groupId>com.example.k8s.springbootmongo</groupId>
+	<artifactId>springboot-k8s-mongo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringCloudK8sMongo</name>
+	<name>springboot-k8s-mongo</name>
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -41,12 +43,12 @@
 			<artifactId>spring-cloud-starter-kubernetes-all</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.github.piomin</groupId>
-			<artifactId>spring-cloud-kubernetes-discovery-ext</artifactId>
-			<version>1.0.0.RELEASE</version>
+		  <groupId>com.github.piomin</groupId>
+		  <artifactId>spring-cloud-kubernetes-discovery-ext</artifactId>
+		  <version>1.0.0.RELEASE</version>
 		</dependency>
 
-		<dependency>
+	   <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
@@ -61,11 +63,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.22</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -77,14 +74,7 @@
 					<finalName>springboot-k8s-mongo</finalName>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.2</version>
-				<configuration>
-					<skipTests>true</skipTests>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
+
 </project>

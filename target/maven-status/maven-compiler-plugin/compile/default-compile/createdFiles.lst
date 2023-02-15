@@ -1,4 +1,4 @@
-com/sai/SpringCloudK8sMongo/repository/ProductRepository.class
-com/sai/SpringCloudK8sMongo/entity/Product.class
-com/sai/SpringCloudK8sMongo/SpringCloudK8sMongoApplication.class
-com/sai/SpringCloudK8sMongo/controller/ProductController.class
+com/example/k8s/springbootmongo/springbootk8smongo/repository/ProductRepository.class
+com/example/k8s/springbootmongo/springbootk8smongo/controller/ProductController.class
+com/example/k8s/springbootmongo/springbootk8smongo/entity/Product.class
+com/example/k8s/springbootmongo/springbootk8smongo/SpringbootK8sMongoApplication.class
