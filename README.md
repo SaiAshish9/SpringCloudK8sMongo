@@ -119,9 +119,10 @@ mongo-849c7745db-47qm8                  1/1     Running             0          5
 spring-mongo-service-6c9f688b8f-dqsfl   0/1     ContainerCreating   0          3s
 spring-mongo-service-6c9f688b8f-kmfsf   0/1     ContainerCreating   0          3s
 
+kubectl logs -f mongo-849c7745db-47qm8
 kubectl logs -f spring-mongo-service-844c79fd84-bknxs
 
-kubectl exec -it mongo-849c7745db-jj9ps mongo -u test -p --authenticationDatabase admin
+kubectl exec -it mongo-849c7745db-jj9ps mongo -u test -p --authenticationDatabase admin///
 
 show dbs;
 
@@ -130,6 +131,8 @@ use admin;
 show collections;
 
 http://minikubeip:minikubenodeport/findAllProducts
+
+minikube service springboot-k8s
 
 POST /addProduct
 
